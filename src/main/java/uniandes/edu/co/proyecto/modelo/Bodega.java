@@ -19,7 +19,7 @@ public class Bodega {
     private Integer tamanio;
 
     @ManyToOne
-    @JoinColumn(name = "id_sucursal", referencedColumnName = "id_sucursal")
+    @JoinColumn(name = "sucursal_id_sucursal", referencedColumnName = "id_sucursal")
     private Sucursal id_sucursal;
 
     public Bodega(String nombre, Integer tamanio, Sucursal id_sucursal){

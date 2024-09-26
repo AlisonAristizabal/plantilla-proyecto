@@ -10,11 +10,11 @@ import jakarta.persistence.ManyToOne;
 public class MinimoReordenPK implements Serializable{
 
     @ManyToOne
-    @JoinColumn(name = "id_bodega", referencedColumnName = "id_bodega")
+    @JoinColumn(name = "bodega_id_bodega", referencedColumnName = "id_bodega")
     private Bodega id_bodega;
 
     @ManyToOne
-    @JoinColumn(name = "id_producto", referencedColumnName = "id_producto")
+    @JoinColumn(name = "producto_id_producto", referencedColumnName = "id_producto")
     private Producto id_producto;
 
     private Integer nivelMinReorden;

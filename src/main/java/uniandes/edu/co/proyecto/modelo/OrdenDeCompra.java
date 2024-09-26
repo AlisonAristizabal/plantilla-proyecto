@@ -21,15 +21,15 @@ public class OrdenDeCompra {
     private String estado;
 
     @ManyToOne
-    @JoinColumn(name = "id_sucursal", referencedColumnName = "id_sucursal")
+    @JoinColumn(name = "sucursal_id_sucursal", referencedColumnName = "id_sucursal")
     private Sucursal id_sucursal;
 
     @ManyToOne
-    @JoinColumn(name = "id_proveedor", referencedColumnName = "NIT")
+    @JoinColumn(name = "proveedor_id_proveedor", referencedColumnName = "NIT")
     private Sucursal id_proveedor;
 
     @ManyToOne
-    @JoinColumn(name = "id_producto", referencedColumnName = "id_producto")
+    @JoinColumn(name = "producto_id_producto", referencedColumnName = "id_producto")
     private Sucursal id_producto;
 
     public OrdenDeCompra(Date fechaEsperadaEntrega, String estado, Sucursal id_sucursal, Sucursal id_proveedor,
