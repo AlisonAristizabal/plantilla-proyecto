@@ -1,11 +1,13 @@
 package uniandes.edu.co.proyecto.modelo;
 
+import java.io.Serializable;
+
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
 @Embeddable
-public class RecepcionProductosPK {
+public class RecepcionProductosPK implements Serializable{
 
     @ManyToOne
     @JoinColumn(name = "orden_de_compra_id_orden", referencedColumnName = "id_orden")
