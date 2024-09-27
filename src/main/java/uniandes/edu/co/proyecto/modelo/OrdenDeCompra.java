@@ -25,15 +25,15 @@ public class OrdenDeCompra {
     private Sucursal id_sucursal;
 
     @ManyToOne
-    @JoinColumn(name = "proveedor_id_proveedor", referencedColumnName = "NIT")
-    private Sucursal id_proveedor;
+    @JoinColumn(name = "proveedor_nit", referencedColumnName = "NIT")
+    private Proveedor id_proveedor;
 
     @ManyToOne
     @JoinColumn(name = "producto_id_producto", referencedColumnName = "id_producto")
-    private Sucursal id_producto;
+    private Producto id_producto;
 
-    public OrdenDeCompra(Date fechaEsperadaEntrega, String estado, Sucursal id_sucursal, Sucursal id_proveedor,
-            Sucursal id_producto) {
+    public OrdenDeCompra(Date fechaEsperadaEntrega, String estado, Sucursal id_sucursal, Proveedor id_proveedor,
+            Producto id_producto) {
         this.fechaEsperadaEntrega = fechaEsperadaEntrega;
         this.estado = estado;
         this.id_sucursal = id_sucursal;
@@ -75,19 +75,19 @@ public class OrdenDeCompra {
         this.id_sucursal = id_sucursal;
     }
 
-    public Sucursal getId_proveedor() {
+    public Proveedor getId_proveedor() {
         return id_proveedor;
     }
 
-    public void setId_proveedor(Sucursal id_proveedor) {
+    public void setId_proveedor(Proveedor id_proveedor) {
         this.id_proveedor = id_proveedor;
     }
 
-    public Sucursal getId_producto() {
+    public Producto getId_producto() {
         return id_producto;
     }
 
-    public void setId_producto(Sucursal id_producto) {
+    public void setId_producto(Producto id_producto) {
         this.id_producto = id_producto;
     }
 
